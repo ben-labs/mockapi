@@ -6,6 +6,7 @@ RUN npm ci --production \
 && npm i tsx \
 && npm run build
 EXPOSE 5000
+EXPOSE 443
 RUN chown -R node:node /app
 USER node
 CMD ["node", "/app/dist/server.js"]
